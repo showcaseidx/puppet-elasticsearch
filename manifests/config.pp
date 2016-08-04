@@ -9,6 +9,7 @@ class elasticsearch::config(
   $datadir        = $elasticsearch::params::datadir,
   $executable     = $elasticsearch::params::executable,
   $logdir         = $elasticsearch::params::logdir,
+  $plugindir      = $elasticsearch::params::plugindir,
   $host           = $elasticsearch::params::host,
   $http_port      = $elasticsearch::params::http_port,
   $transport_port = $elasticsearch::params::transport_port,
@@ -28,7 +29,8 @@ class elasticsearch::config(
     [
       $configdir,
       $datadir,
-      $logdir
+      $logdir,
+      $plugindir
     ]:
       ensure => $dir_ensure ;
 

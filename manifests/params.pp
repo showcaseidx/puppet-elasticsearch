@@ -17,6 +17,7 @@ class elasticsearch::params {
       $datadir        = "${boxen::config::datadir}/elasticsearch"
       $executable     = "${boxen::config::homebrewdir}/bin/elasticsearch"
       $logdir         = "${boxen::config::logdir}/elasticsearch"
+      $plugindir      = "${boxen::config::homebrewdir}/var/lib/elasticsearch/plugins"
 
       $host           = '127.0.0.1'
       $http_port      = 19200
